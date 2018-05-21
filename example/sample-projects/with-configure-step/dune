@@ -1,0 +1,12 @@
+(jbuild_version 1)
+
+(rule
+ ((fallback)
+  (targets (config))
+  (deps    (config.defaults))
+  (action  (copy ${<} ${@}))))
+
+(rule
+ ((targets (config.full))
+  (deps    (config_common.ml config))
+  (action  (run ${OCAML} ${path:real_configure.ml}))))
