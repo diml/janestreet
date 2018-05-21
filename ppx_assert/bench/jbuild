@@ -1,0 +1,7 @@
+(library
+ ((name ppx_assert_bench_lib)
+  (libraries (ppx_compare.runtime-lib))
+  (preprocess (pps (ppx_assert ppx_bench ppxlib.runner)))))
+
+
+(jbuild_version 1)
