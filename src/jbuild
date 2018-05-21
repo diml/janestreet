@@ -1,0 +1,8 @@
+(library
+ ((name sequencer_table)
+  (public_name sequencer_table)
+  (preprocess (pps (ppx_jane -check-doc-comments ppxlib.runner)))
+  (libraries (async))))
+
+
+(jbuild_version 1)
