@@ -1,8 +1,0 @@
-(jbuild_version 1)
-
-(alias
- ((name runtest)
-  (deps (main.exe))
-  (action (run ${<}))))
-
-(executable ((name main)))
