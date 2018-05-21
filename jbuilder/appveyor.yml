@@ -1,0 +1,14 @@
+# AppVeyor config using https://github.com/Chris00/ocaml-appveyor
+
+install:
+  - cd "%APPVEYOR_BUILD_FOLDER%"
+  - install_ocaml.cmd
+
+build_script:
+  - cd "%APPVEYOR_BUILD_FOLDER%"
+  - ocaml bootstrap.ml
+  - boot.exe --dev
+
+artifacts:
+  - path: _build/log
+    name: build-log
