@@ -1,0 +1,9 @@
+(library
+ ((name core_bench)
+  (public_name core_bench)
+  (libraries (core
+              textutils))
+  (preprocess (pps (ppx_jane ppxlib.runner)))))
+
+
+(jbuild_version 1)
