@@ -1,0 +1,36 @@
+opam-version: "1.2"
+maintainer: "opensource@janestreet.com"
+authors: ["Jane Street Group, LLC <opensource@janestreet.com>"]
+homepage: "https://github.com/janestreet/async_extended"
+bug-reports: "https://github.com/janestreet/async_extended/issues"
+dev-repo: "git+https://github.com/janestreet/async_extended.git"
+license: "Apache-2.0"
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "async"
+  "async_find"
+  "async_inotify"
+  "async_interactive"
+  "async_shell"
+  "command_rpc"
+  "core"
+  "core_extended"
+  "delimited_parsing"
+  "expect_test_helpers"
+  "ppx_jane"
+  "sequencer_table"
+  "textutils"
+  "jbuilder"                {build & >= "1.0+beta18.1"}
+  "ocaml-migrate-parsetree" {>= "1.0"}
+  "ppxlib"                  {>= "0.1.0"}
+]
+available: [ ocaml-version >= "4.06.1" ]
+descr: "
+Additional utilities for async
+
+Async_extended is a collection of utilities for async. They don't
+get the same level of review compared to other packages of the core
+suite but they might still be useful.
+"
